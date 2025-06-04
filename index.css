@@ -1,0 +1,170 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f2f5; /* Light background */
+    color: #333;
+    min-height: 100vh; /* Ensure footer stays at bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1; /* Allow main content to grow and push footer down */
+}
+
+/* Header/Navbar Styling */
+.navbar {
+    background-color: #2c3e50 !important; /* Dark blue/grey */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+    color: #ecf0f1 !important; /* Light text for brand */
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.75) !important;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem; /* Adjust padding for better click area */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active-roadmap { /* Custom active class for JS */
+    color: #3498db !important; /* Brighter blue on hover/active */
+    font-weight: bold;
+}
+
+/* Main Content Styling */
+#roadmap-title {
+    color: #2c3e50;
+    margin-bottom: 3rem;
+}
+
+.roadmap-phase {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+}
+
+.roadmap-phase-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.roadmap-phase-header h3 {
+    color: #34495e; /* Darker blue/grey */
+    font-weight: 700;
+    margin-bottom: 0;
+    flex-grow: 1; /* Takes remaining space */
+}
+
+.roadmap-phase-icon {
+    font-size: 2.5rem;
+    color: #3498db; /* Blue icon */
+    margin-right: 1.5rem;
+}
+
+.roadmap-topic {
+    margin-bottom: 1.2rem;
+}
+
+.roadmap-topic h4 {
+    color: #2c3e50;
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+}
+
+.roadmap-topic ul {
+    list-style: none; /* Remove default list bullets */
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.roadmap-topic ul li {
+    background-color: #f9f9f9;
+    border-left: 4px solid #3498db;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.4rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.roadmap-topic ul li i {
+    margin-right: 0.8rem;
+    color: #27ae60; /* Green checkmark */
+}
+
+.roadmap-topic ul li a {
+    color: #2980b9; /* Slightly darker blue for links */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.roadmap-topic ul li a:hover {
+    text-decoration: underline;
+    color: #2c3e50;
+}
+
+.placeholder-content {
+    padding: 50px 0;
+    color: #555;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2c3e50 !important;
+    color: #ecf0f1 !important;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+footer i {
+    margin: 0 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem !important;
+    }
+    .roadmap-phase {
+        padding: 1.5rem;
+    }
+    .roadmap-phase-icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+    .roadmap-phase-header h3 {
+        font-size: 1.75rem;
+    }
+    .roadmap-topic h4 {
+        font-size: 1.2rem;
+    }
+    .roadmap-topic ul li {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    .placeholder-content .fa-arrow-up {
+        display: none !important; /* Hide arrow on small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .roadmap-phase {
+        margin-bottom: 2rem;
+    }
+    .roadmap-phase-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .roadmap-phase-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
